@@ -6,11 +6,11 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
-const Pagination = ({
+const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   currentPage,
   onPageChange,
-}: PaginationProps) => {
+}) => {
   const pageNumbers = Array.from(
     { length: totalPages },
     (_, index) => index + 1

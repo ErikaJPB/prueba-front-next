@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import ThemeToggle from "@/components/ThemeToggle";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const font = Raleway({ subsets: ["latin"] });
 
@@ -18,10 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <div className="flex flex-col items-end mt-8 mr-6">
-          <ThemeToggle />
+        <div className="flex flex-col min-h-screen">
+          <div className="flex justify-between items-center px-4 py-2 ">
+            <Navbar />
+            <ThemeToggle />
+          </div>
+          <main className="flex-1">{children}</main>
+          <Footer />
         </div>
-        <main>{children}</main>
       </body>
     </html>
   );

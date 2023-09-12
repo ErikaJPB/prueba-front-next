@@ -1,12 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { CiLight } from "react-icons/ci";
+import { MdDarkMode } from "react-icons/md";
 
-const ThemeToggle = () => {
+const ThemeToggle: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
+
+    localStorage.setItem("theme", isDarkMode ? "light" : "dark");
   };
 
   useEffect(() => {
@@ -22,15 +26,27 @@ const ThemeToggle = () => {
     }
   }, [isDarkMode]);
 
-  // Define text color based on theme
+  useEffect(() => {
+    // Load the theme preference from local storage if it exists
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setIsDarkMode(true);
+    }
+  }, []);
+
   const textColor = isDarkMode ? "text-white" : "text-black";
+  const iconColor = isDarkMode ? "#FFFFFF" : "#000000";
 
   return (
     <button
-      className={`p-2 m-2 rounded-full bg-gray-200 dark:bg-gray-500 ${textColor}`}
+      className={`p-2 m-2 rounded-full bg-gray-200 dark:bg-gray-400 ${textColor}`}
       onClick={toggleTheme}
     >
-      {isDarkMode ? "Light" : "Dark"} Mode
+      {isDarkMode ? (
+        <CiLight size={20} style={{ color: iconColor }} />
+      ) : (
+        <MdDarkMode size={20} style={{ color: iconColor }} />
+      )}
     </button>
   );
 };
