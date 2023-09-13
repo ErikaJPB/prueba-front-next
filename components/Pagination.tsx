@@ -18,13 +18,13 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <div className="w-full h-full flex flex-col items-center mt-9">
-      <ul className="pagination flex items-center space-x-4 mt-2 mb-6">
+      <ul className="pagination flex flex-wrap items-center space-x-2 mt-2 mb-6">
         {pageNumbers.map((pageNumber) => (
           <li
             key={pageNumber}
             className={`pagination-item ${
               currentPage === pageNumber ? "active" : ""
-            } bg-white shadow-md rounded-sm w-8 h-8 flex items-center justify-center cursor-pointer text-black hover:text-white`}
+            } bg-white shadow-md rounded-full w-8 h-8 flex items-center justify-center cursor-pointer text-black hover:text-white`}
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}

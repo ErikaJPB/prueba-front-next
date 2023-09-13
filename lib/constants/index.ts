@@ -31,3 +31,25 @@ export const footerLinks = [
     path: "https://www.threads.net/@erikajpb",
   },
 ];
+
+export const codingSkills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Redux",
+  "Next.js",
+  "TailwindCSS",
+  "Node.js",
+  "HTML/CSS",
+];
+
+export const softSkills = [
+  "Comunicación",
+  "Trabajo en equipo",
+  "Resolución de problemas",
+  "Adaptabilidad",
+  "Creatividad",
+  "Empatía",
+  "Proactividad",
+  "Responsabilidad",
+];

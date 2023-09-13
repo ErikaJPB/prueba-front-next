@@ -16,6 +16,6 @@ export async function getPosts(page = 1, limit = 10) {
     return posts;
   } catch (error) {
     console.error(error);
-    throw error;
+    throw new Error();
   }
 }

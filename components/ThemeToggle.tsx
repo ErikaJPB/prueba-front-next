@@ -9,8 +9,7 @@ const ThemeToggle: React.FC = () => {
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
-
-    localStorage.setItem("theme", isDarkMode ? "light" : "dark");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   };
 
   useEffect(() => {
@@ -27,7 +26,6 @@ const ThemeToggle: React.FC = () => {
   }, [isDarkMode]);
 
   useEffect(() => {
-    // Load the theme preference from local storage if it exists
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       setIsDarkMode(true);

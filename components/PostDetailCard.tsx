@@ -13,7 +13,7 @@ const PostDetailCard: React.FC<PostDetailCardProps> = ({ comments }) => {
         {comments.map((comment, index) => (
           <li
             key={comment.id}
-            className={`border p-4 rounded-lg mb-4 py-6 mt-8  ${
+            className={`border p-4 rounded-lg mb-4 py-4 mt-4  ${
               index !== comments.length - 1 ? "mb-6" : ""
             }`}
           >
