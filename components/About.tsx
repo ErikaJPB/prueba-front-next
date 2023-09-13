@@ -2,9 +2,9 @@ import React from "react";
 
 function About() {
   return (
-    <div className="max-w-6xl mx-auto p-4">
-      <div className="md:flex md:space-x-4">
-        <p className="text-base md:text-lg  text-justify">
+    <div className="max-w-6xl mx-auto p-4 mt-8">
+      <div className="text-center">
+        <p className="text-base md:text-lg text-justify">
           Mi objetivo profesional es trabajar en <b>Auco.ai</b> aportando mis
           conocimientos y habilidades para brindar una mejor experiencia de
           usuario a los clientes del servicio. Igualmente, espero crecer dentro
@@ -14,12 +14,15 @@ function About() {
           tecnologías y aportar mis conocimientos en el desarrollo de nuevas
           funcionalidades. Los retos no me asustan, y creo que en ellos reside
           la mejor forma de aprender.
-          <br />
-          <br />
-          <br />
-          <h3 className="text-xl font-semibold mb-4 mt-4">
-            Un poco más acerca de mi ...
-          </h3>
+        </p>
+
+        <br />
+        <br />
+
+        <h3 className="text-xl font-semibold mt-4 mb-8">
+          Un poco más acerca de mi ...
+        </h3>
+        <p className="text-base md:text-lg text-justify">
           Soy una persona a la que le gustan los nuevos retos constantemente, ya
           que contribuyen a mi crecimiento personal y profesional. Desde niña,
           he sentido pasión por la tecnología. Conocí la programación en la
@@ -47,8 +50,6 @@ function About() {
           cuando me encuentro con errores, especialmente porque estas ideas
           suelen aparecer cuando estoy realizando otra actividad, como hacer
           deporte, leer o estar con mi familia.
-          <br />
-          <br />
           <br />
           <br />
         </p>
